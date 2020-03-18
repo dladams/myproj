@@ -1,0 +1,7 @@
+tools: {
+  mytool: {
+       tool_type: MyTool
+     LogLevel: 2
+        Scale: 100
+  }
+}

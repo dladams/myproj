@@ -1,0 +1,6 @@
+# MySvc.fcl
+# bare bones fcl test
+
+services: {
+  MySvc: {}
+}

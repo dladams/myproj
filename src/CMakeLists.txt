@@ -1,0 +1,39 @@
+# Build a utility library.
+set(PKGLIB ${PROJECT_NAME})
+FILE(GLOB MYSRCS *.cxx)
+add_library(${PKGLIB} SHARED ${MYSRCS})
+target_link_libraries(${PKGLIB} ${source_lib_list})
+install(TARGETS ${PKGLIB} DESTINATION lib)
+
+# Build an executable.
+add_executable(myhello myhello.cxx)
+install(TARGETS myhello DESTINATION bin)
+
+# Build a service.
+add_library(MySvc_service SHARED MySvc_service.cc)
+target_link_libraries(MySvc_service ${service_lib_list})
+install(TARGETS MySvc_service DESTINATION lib)
+
+# Build a tool.
+add_library(MyTool_tool SHARED MyTool_tool.cc)
+target_include_directories(MyTool_tool BEFORE PRIVATE ../Interface)
+target_link_libraries(MyTool_tool ${tool_lib_list})
+install(TARGETS MyTool_tool DESTINATION lib)
+
+# Build Root dictionary.
+message("Start building dictionaries")
+set(DICT_NAME ${PROJECT_NAME})
+reflex_generate_dictionary(${DICT_NAME} classes.h SELECTION classes_def.xml)
+add_library(${PKGLIB}Dict SHARED ${CMAKE_CURRENT_BINARY_DIR}/${DICT_NAME}.cxx)
+target_link_libraries(${PKGLIB}Dict ${PKGLIB})
+#target_link_libraries(${PKGLIB}Dict ${source_lib_list})
+target_link_libraries(${PKGLIB}Dict ${ROOT_LIBRARIES})
+install(TARGETS ${PKGLIB}Dict DESTINATION lib)
+install(
+  FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/${DICT_NAME}_rdict.pcm
+    ${CMAKE_CURRENT_BINARY_DIR}/${DICT_NAME}Dict.rootmap
+  DESTINATION lib
+)
+
+add_subdirectory(test)
