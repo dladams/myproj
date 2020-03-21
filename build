@@ -11,7 +11,7 @@
 #   DUNE_BUILD_DIR/PROJECT
 
 ARGS="$*"
-PROJECT=myproj
+PROJECT=myproc
 
 # Assign source directory.
 SRCDIR=$(dirname $0)
@@ -56,18 +56,26 @@ DOCMAKE=
 DOBUILD=
 DOINSTALL=
 for ARG in $ARGS; do
-  if [ "$ARG" = show ]; then
-date
+  if [ "$ARG" = help ]; then
+    echo Usage: $0 OPT
+    echo "          cmake - runs cmake to generate build area"
+    echo "           make - runs make in the build area to compile, etc."
+    echo "        install - install from the build area"
+    echo "  all [default] - runs cmake, make and install"
+    echo "   cleaninstall - removes the installation area"
+    echo "      cleanmake - removes the build area"
+    echo "          clean - removes both"
+    exit 0
   elif [ "$ARG" = cleaninstall ]; then
     DOCLEANINSTALL=true
-  elif [ "$ARG" = cleanbuild ]; then
+  elif [ "$ARG" = cleanmake ]; then
     DOCLEANBUILD=true
   elif [ "$ARG" = clean ]; then
     DOCLEANBUILD=true
     DOCLEANINSTALL=true
   elif [ $ARG = cmake ]; then
     DOCMAKE=true
-  elif [ $ARG = build ]; then
+  elif [ $ARG = make ]; then
     DOBUILD=true
   elif [ $ARG = install ]; then
     DOINSTALL=true
@@ -88,7 +96,7 @@ echo Install: $INSDIR
 
 if [ -n "$DOCLEANBUILD" ]; then
   echo
-  echo Removing build area...
+  echo Removing make area...
   rm -rf $BLDDIR
 fi
 
