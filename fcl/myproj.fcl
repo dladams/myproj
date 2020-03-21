@@ -1,0 +1,13 @@
+# Example fcl for myproj.
+
+tools.myxform10: {
+  tool_type: MyTool
+   LogLevel: 1
+      Scale: 10
+}
+
+tools.myxform100: {
+  tool_type: MyTool
+   LogLevel: 1
+      Scale: 100
+}

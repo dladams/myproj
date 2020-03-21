@@ -11,7 +11,7 @@
 #   DUNE_BUILD_DIR/PROJECT
 
 ARGS="$*"
-PROJECT=myproc
+PROJECT=myproj
 
 # Assign source directory.
 SRCDIR=$(dirname $0)
