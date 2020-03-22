@@ -14,12 +14,6 @@ add_library(MySvc_service SHARED MySvc_service.cc)
 target_link_libraries(MySvc_service ${service_lib_list})
 install(TARGETS MySvc_service DESTINATION lib)
 
-# Build a tool.
-add_library(MyTool_tool SHARED MyTool_tool.cc)
-target_include_directories(MyTool_tool BEFORE PRIVATE ../Interface)
-target_link_libraries(MyTool_tool ${tool_lib_list})
-install(TARGETS MyTool_tool DESTINATION lib)
-
 # Build Root dictionary.
 message("Start building dictionaries")
 set(DICT_NAME ${PROJECT_NAME})
