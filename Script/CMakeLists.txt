@@ -1,4 +1,4 @@
-set(CMAKE_VERBOSE_MAKEFILE ON)
+# myproj/Script/CMakeLists.txt
 
 # Build setup file for this package.
 string(TOUPPER ${PROJECT_NAME} PROJECT_UPNAME)

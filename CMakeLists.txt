@@ -1,13 +1,16 @@
+# myproj/CMakeLists.txt
+#
 # CMakeLists for example project myproj
 #
 # David Adams
 # March 2020
 #
-# Uses art studio cmake functions but does not use
-# studio command line.
+# Uses cmake functions from art studio and root.
+# Not for use with the studio command.
+# Build with myproj/build.
 
 cmake_minimum_required(VERSION 3.14.0)
-project(myproj VERSION "00.04.00")
+project(myproj VERSION "00.05.00")
 
 # Load the helpers from studio.
 list(APPEND CMAKE_MODULE_PATH $ENV{STUDIO_INC})
@@ -69,5 +72,5 @@ add_subdirectory(Utility)
 add_subdirectory(Tool)
 add_subdirectory(Service)
 add_subdirectory(Exec)
-add_subdirectory(bin)
-add_subdirectory(fcl)
+add_subdirectory(Script)
+add_subdirectory(Fcl)
