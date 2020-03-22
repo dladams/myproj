@@ -1,13 +1,11 @@
+# myproj/Utility/CMakeLists.txt
+
 # Build a utility library.
 set(PKGLIB ${PROJECT_NAME})
 FILE(GLOB MYSRCS *.cxx)
 add_library(${PKGLIB} SHARED ${MYSRCS})
 target_link_libraries(${PKGLIB} ${source_lib_list})
 install(TARGETS ${PKGLIB} DESTINATION lib)
-
-# Build an executable.
-add_executable(myhello myhello.cxx)
-install(TARGETS myhello DESTINATION bin)
 
 # Build Root dictionary.
 message("Start building dictionaries")

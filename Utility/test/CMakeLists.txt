@@ -1,4 +1,4 @@
-# myproj/src/test/CMakeLists.txt
+# myproj/Utility/test/CMakeLists.txt
 
 # Test for utiltity.
 add_executable(test_MyXform test_MyXform.cxx)

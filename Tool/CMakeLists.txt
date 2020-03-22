@@ -1,3 +1,5 @@
+# myproj/Tool/CMakeLists.txt
+
 # Build a tool.
 add_library(MyTool_tool SHARED MyTool_tool.cc)
 target_include_directories(MyTool_tool BEFORE PRIVATE ../Interface)
