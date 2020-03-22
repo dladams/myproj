@@ -9,11 +9,6 @@ install(TARGETS ${PKGLIB} DESTINATION lib)
 add_executable(myhello myhello.cxx)
 install(TARGETS myhello DESTINATION bin)
 
-# Build a service.
-add_library(MySvc_service SHARED MySvc_service.cc)
-target_link_libraries(MySvc_service ${service_lib_list})
-install(TARGETS MySvc_service DESTINATION lib)
-
 # Build Root dictionary.
 message("Start building dictionaries")
 set(DICT_NAME ${PROJECT_NAME})
