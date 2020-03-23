@@ -13,7 +13,7 @@ Root dictionaries for the utiltities and tools.
 It is also possible (and encouraged) to create tests for each of these
 components and to create a script that runs all the tests.
 The tests and this script are installed in the test subdirectory of
-th project installation area.
+the project installation area.
 
 ### Installation
 
