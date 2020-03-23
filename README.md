@@ -35,34 +35,34 @@ To build and install the code, from any directory,
 or equivalently issue the following three commands:
 <pre>
 &lt;path-to-code>/build cmake
-<pre>
+</pre>
 to run cmake and generate the build area,
 <pre>
 &lt;path-to-code>/build make
-<pre>
+</pre>
 to build the project, and
 <pre>
 &lt;path-to-code>/build install
-<pre>
+</pre>
 to install it.
 
 To set up, to use the package, source the setup script in the installation
 directory:
 <pre>
 source $DUNE_INSTALL_DIRECTORY/myproj/install.sh
-<pre>
+</pre>
 The project executables, scripts, libraries (including Root dicionaries) and fcl files
 are now included in the usual system paths.
 The variable MYPROJ\_DIR points to the package installation directory.
 E.g. to run the demo executable:
 <pre>
 myhello
-<pre>
+</pre>
 
 The project includes a variety of component tests. All of thes may be run with the
 command
 <pre>
 $MYPROJ_DIR/test/test
-<pre>
+</pre>
 The test are run in the current directory and may write some files, and so it
 is best to run this in a clean directory.
