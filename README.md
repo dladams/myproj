@@ -62,6 +62,8 @@ to build the project, and
 </pre>
 to install it.
 
+### Using the project
+
 To set up to use the package, source the setup script in the installation
 directory:
 <pre>
@@ -74,6 +76,17 @@ E.g. to run the demo executable:
 <pre>
 myhello
 </pre>
+
+Start a Root session and use the MyXform class:
+<pre>
+root.exe
+[root [0] MyXform xf(8);
+MyXform::ctor: Scale is 8
+root [1] xf.transform(128)
+(float) 1024.00f
+</pre>
+
+### Testing
 
 The project includes a variety of component tests. All of thes may be run with the
 command
