@@ -46,7 +46,7 @@ to build the project, and
 </pre>
 to install it.
 
-To set up, to use the package, source the setup script in the installation
+To set up to use the package, source the setup script in the installation
 directory:
 <pre>
 source $DUNE_INSTALL_DIRECTORY/myproj/install.sh
