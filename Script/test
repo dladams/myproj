@@ -43,6 +43,7 @@ if
   runtest "root.exe -b -q $MYPROJ_DIR/root/roothello.C" &&
   runtest $TSTDIR/test_MyTool &&
   runtest myhello
+  runtest "python $MYPROJ_DIR/python/pyhello.py"
 then
   echo
   echo All tests pass.
