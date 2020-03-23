@@ -40,6 +40,7 @@ TESTCOUNT=0
 if
   runtest $TSTDIR/test_MyXform &&
   runtest "root.exe -b -q $TSTDIR/test_MyXform.C" &&
+  runtest "root.exe -b -q $MYPROJ_DIR/root/roothello.C" &&
   runtest $TSTDIR/test_MyTool &&
   runtest myhello
 then
