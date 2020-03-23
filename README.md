@@ -1,6 +1,22 @@
 # myproj
 Example DUNE analysis project  
 
+### Introduction
+
+The goal is to have a code development framework that is easy to use
+for developers, installers and users.
+Code is separated into small projects which can include
+utilities (ordinary C++ classes and functions), scripts and executables
+(C++ main programs), art tools and tool interfaces, art services, and
+Root dictionaries for the utiltities and tools.
+
+It is also possible (and encouraged) to create tests for each of these
+components and to create a script that runs all the tests.
+The tests and this script are installed in the test subdirectory of
+th project installation area.
+
+### Installation
+
 Build and test the project as follows. First, choose an installation
 bse directory and, from there, check out the code:
 <pre>
@@ -51,7 +67,7 @@ directory:
 <pre>
 source $DUNE_INSTALL_DIRECTORY/myproj/install.sh
 </pre>
-The project executables, scripts, libraries (including Root dicionaries) and fcl files
+The project executables, scripts, libraries (including Root dictionaries) and fcl files
 are now included in the usual system paths.
 The variable MYPROJ\_DIR points to the package installation directory.
 E.g. to run the demo executable:
