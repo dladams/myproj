@@ -15,6 +15,21 @@ components and to create a script that runs all the tests.
 The tests and this script are installed in the test subdirectory of
 the project installation area.
 
+### Setup
+
+DUNE analysis projects are assumed to depend on dunetpc and so users must first set up that project.
+Their build makes use of art studio and cmake which must also be set up. At FNAL, the
+following commands can be used:
+<pre>
+source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
+setup dunetpc v08_48_01 -q e19:prof
+setup cmake v3_14_3
+setup studio v1_02_00
+<pre>
+The versions here were the moset recent in early April 2020.
+Users will typically want to use the most current version of dunetpc and should be able to use later versions of cmake and studio.
+Let David Adams know if you have any problems.
+
 ### Installation
 
 Build and test the project as follows. First, choose an installation
