@@ -26,8 +26,8 @@ setup dunetpc v08_48_01 -q e19:prof
 setup cmake v3_14_3
 setup studio v1_02_00
 </pre>
-The versions here were the moset recent in early April 2020.
-Users will typically want to use the most current version of dunetpc and should be able to use later versions of cmake and studio.
+The versions here were current in early April 2020.
+Users will typically want to use the most recent version of dunetpc and should be able to use later versions of cmake and studio.
 Let David Adams know if you have any problems.
 
 ### Installation
