@@ -27,7 +27,12 @@ setup cmake v3_14_3
 setup studio v1_02_00
 </pre>
 The versions here were current in early September 2021 and should be replaced with current values.
-Users will typically want to use the most recent version of dunetpc and should be able to use later versions of cmake and studio.
+The command
+<pre>
+ups list -aK+ dunetpc
+</pre>
+(or replace dunetpc with cmake or studio) can be used to list all available versions.
+Users will typically want to use the most recent version of dunetpc, cmake and studio.
 Let David Adams know if you have any problems.
 
 ### Installation
