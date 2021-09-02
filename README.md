@@ -22,11 +22,11 @@ Their build makes use of art studio and cmake which must also be set up. At FNAL
 following commands can be used:
 <pre>
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-setup dunetpc v08_48_01 -q e19:prof
+setup dunetpc v09_28_02 -q e20:prof
 setup cmake v3_14_3
 setup studio v1_02_00
 </pre>
-The versions here were current in early April 2020.
+The versions here were current in early September 2021 and should be replaced with current values.
 Users will typically want to use the most recent version of dunetpc and should be able to use later versions of cmake and studio.
 Let David Adams know if you have any problems.
 
